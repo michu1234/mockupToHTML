@@ -1,0 +1,295 @@
+/*     SMACCSS + BEM by DRUPAL
+===================================== */
+
+/*Table of Contents*/
+
+
+/*1. Base*/
+
+/*2. Layout*/
+
+/*3. Components*/
+
+        /* Component BEM (Block) */
+
+        /* Element BEM */
+
+        /* Modifier BEM */
+
+/*4. State*/
+
+/*5. Media Queries*/
+
+
+/*///////////////////////////////////////////*/
+
+
+/*1. BASE*/
+
+html,
+body
+{
+    font-family: 'Roboto', sans-serif;
+    font-size: 62.5%;
+
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+
+    color: #303030;
+    background: #ecf0f1;
+}
+
+h2
+{
+    font-size: 1.7rem;
+
+    margin-bottom: 1px;
+}
+
+h3
+{
+    font-size: 1.1rem;
+    line-height: 25px;
+
+    margin: 4px 0 0 0;
+    padding: 0;
+
+    color: #d7d8da;
+}
+
+p
+{
+    font-size: 1.3rem;
+}
+
+
+/*2. LAYOUT*/
+
+header,
+nav,
+ul
+{
+    height: auto;
+    margin-top: 10px;
+}
+
+.container
+{
+    width: 85%;
+    max-width: 999px;
+    margin: 0 auto 20px auto;
+}
+
+.blog
+{
+    max-width: 100%;
+    height: auto;
+}
+
+.row
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+
+/*3. COMPONENTS*/
+
+
+    /*    COMPONENT   */
+
+
+.navigation
+{
+    list-style: none;
+
+    border-bottom: 1px solid #bfc3c4;
+}
+
+.blog-post
+{
+    position: relative;
+
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+
+    min-width: 200px;
+    max-width: 100%;
+    margin: 2% 2% 2% 2%;
+    padding: 10px;
+
+    border-radius: 5px;
+    background-color: #fffaf0;
+    -webkit-box-shadow: 0 1px 1px #9d9d9d;
+    box-shadow: 0 1px 1px #9d9d9d;
+
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+
+    /*    ELEMENT   */
+
+
+.navigation__tab
+{
+    font-size: 3rem;
+
+    display: inline-block;
+
+    min-width: 180px;
+    padding: 0 1% 0 1%;
+
+    cursor: pointer;
+    text-align: center;
+
+    color: #bfc4c8;
+}
+
+.blog-post__category
+{
+    font-size: 1.3rem;
+    line-height: 3.5rem;
+
+    display: inline-block;
+
+    margin-left: auto;
+
+    color: #bfc4c8;
+}
+
+.blog-post__title
+{
+    position: absolute;
+    bottom: 8px;
+    left: 5%;
+}
+
+.blog-post__rating
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    max-width: 100%;
+    height: auto;
+    margin-top: auto;
+
+    border-top: 1px solid #f2f2f2;
+}
+
+.blog-post__rating-reverse
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    padding-right: 10px;
+
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.blog-post__rating-counter
+{
+    font-size: 1.3rem;
+
+    vertical-align: middle;
+}
+
+.blog-post__votes
+{
+    font-size: 2rem;
+
+    vertical-align: middle;
+
+    color: #bfc4c8;
+}
+
+
+/*    MODIFIER   */
+
+.blog-post--background
+{
+    min-height: 160px;
+
+    background-image: url('http://lorempixel.com/400/400/');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.font--white
+{
+    color: #fffaf0;
+    text-shadow: 0 0 3px black;
+}
+
+.font--gray
+{
+    color: #bfc4c8;
+}
+
+
+/*STATE*/
+
+.is--active
+{
+    color: #000;
+    border-bottom: 3px solid #3ac476;
+}
+
+.is--hover:hover
+{
+    color: #fff;
+    background: #3ac476;
+}
+
+.is--hover-star:hover
+{
+    color: #e38023;
+}
+
+.is--hover,
+.is--hover-star
+{
+    -webkit-transition: all .6s;
+    transition: all .6s;
+}
+
+
+/*MEDIA QUERIES*/
+
+
+@media screen and (max-width: 319px)
+{
+    .container
+    {
+        width: 100%;
+    }
+    .blog__post
+    {
+        margin: 2% 0 2% 0;
+    }
+}
+
+@media screen and (max-width: 530px)
+{
+    .navigation
+    {
+        padding: 0;
+
+        text-align: center;
+    }
+}
